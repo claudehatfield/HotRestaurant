@@ -8,6 +8,8 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true}))
 app.use(express.json());
 
+app.use(express.static("public"));
+
 var table = [
     {
         routeName: "yoda",
@@ -35,7 +37,7 @@ app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-//Tables route 
+//Tables route shows reservations and waitlist 
 app.get("/tables", function(req, res){
     res.sendFile(path.join(__dirname, "tables.html"));
 });

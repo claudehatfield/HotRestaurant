@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Tables</title>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -18,41 +18,61 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            text-align: center;
+        }
 
+        .controlPanel {
+            text-align: left;
+        }
+
+        .list-group {
+            margin: 15px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="main-container">
-        <div class="container">
-            <!-- Jumbotron -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <header>
-                                <br>
-                                <h1>Hot Tacos</h1>
-                                <hr>
-                            </header>
-                            <div class="buttons ">
-                                <h2>Book your seat before they're all gone!</h2><br>
-                                <a href="">
-                                    <button type="button" class="btn btn-primary"><span class="fa fa-list-alt"></span> View
-                                        Tables</button>
-                                </a>
-                                <a href="">
-                                    <button type="button" class="btn btn-secondary"><span class="fa fa-credit-card"></span>
-                                        Make Reservation</button>
-                                </a>
-                                <br><br>
-                            </div>
+
+    <div class="container">
+
+        <!-- Site Header -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <header>
+                            <br>
+                            <h1>
+                                <span class="fa fa-fire"></span>
+                                Hot Tacos</h1>
+                            <hr>
+                        </header>
+                        <div class="buttons ">
+                            <h2>Book your seat before they're all gone!</h2><br>
+                            <a href="/tables">
+                                <button type="button" class="btn btn-primary"><span class="fa fa-list-alt"></span> View
+                                    Tables</button>
+                            </a>
+                            <a href="/">
+                                <button type="button" class="btn btn-secondary"><span class="fa fa-home"></span>
+                                </button>
+                            </a>
+                            <br><br>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <!-- Table Reservations -->
-                <div class="card" style="width: 18rem;">
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Table Reservations -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
                     <div class="card-header">
                         Current Reservations
                     </div>
@@ -64,12 +84,16 @@
                         <li class="list-group-item">Phone: (512)111-1111</li>
                     </ul>
                 </div>
-                <!-- End Table Reservations -->
-                <br>
             </div>
-            <div class="row">
-                <!-- Waiting List -->
-                <div class="card" style="width: 18rem;">
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Waiting List -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
                     <div class="card-header">
                         Waiting List
                     </div>
@@ -81,29 +105,27 @@
                         <li class="list-group-item">Phone: (512)111-1111</li>
                     </ul>
                 </div>
-                <!-- End Waiting List -->
-                <br>
-            </div>
-            <div class="row">
-                <div class="col-md-12 controlPanel">
-                    <br>
-                    <button type="button" class="btn btn-link">Clear Table</button>
-                    |
-                    <button type="button" class="btn btn-link">API Table Link</button>
-                    |
-                    <button type="button" class="btn btn-link">API Wait List</button>
-                </div>
             </div>
         </div>
-        <!-- End Jumbotron -->
 
+        <!-- Control Panel -->
+        <div class="row">
+            <div class="col-md-12 controlPanel">
+                <br>
+                <a href="/api/clear">
+                    <button type="button" class="btn btn-link"><span class="fa fa-link"></span> Clear Tables</button>
+                </a>
+                |
+                <a href="/api/tables">
+                    <button type="button" class="btn btn-link"><span class="fa fa-link"></span> API Table Link</button>
+                </a>
+                |
+                <a href="/api/waitlist">
+                    <button type="button" class="btn btn-link"><span class="fa fa-link"></span> API Wait List</button>
+                </a>
+            </div>
+        </div>
 
-
-        <!-- <p>Control Panel</p>
-        <a href="#" target="_blank">Clear Table |</a>
-        <a href="#" target="_blank">API Table Link |</a>
-        <a href="#" target="_blank">API Wait List</a>
-    </div> -->
 </body>
 
 </html>

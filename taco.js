@@ -10,16 +10,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-var table = [
-    {
-        routeName: "yoda",
-        name: "Yoda",
-        role: "Jedi Master",
-        age: 900,
-        forcePoints: 2000
-    },
+var table = [];
 
-];
+
 
 var waitlist = [
     {
@@ -34,17 +27,17 @@ var waitlist = [
 
 //landing page is a GET route
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
 //Tables route shows reservations and waitlist 
 app.get("/tables", function(req, res){
-    res.sendFile(path.join(__dirname, "tables.html"));
+    res.sendFile(path.join(__dirname, "./public/tables.html"));
 });
 
 //Make Reservations route
-app.get("/reservations", function(req, res){
-    res.sendFile(path.join(__dirname, "?"));
+app.get("/reserved", function(req, res){
+    res.sendFile(path.join(__dirname, "./public/reservation.html"));
 });
 
 //2 API links: API Table route, API Waitlist route
